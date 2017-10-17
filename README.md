@@ -10,15 +10,15 @@ Markdown is a lightweight and easy-to-use syntax for styling your writing. It in
 
 ```markdown
 <div id="id-modal" class="gt-modal">
-    <div class="gt-modal-content gt-animate-opacity">
-        <div class="gt-modal-header"></div>
-        <div class="gt-modal-body"></div>
-        <div data-modal="hide" class="gt-modal-close">
-            <a href="javascript:void(0);">
-                <img src="http://static.gabia.com/gtris/1.1.0/assets/images/delete.svg" alt="닫기">
-            </a>
-        </div>
+  <div class="gt-modal-content gt-animate-opacity">
+    <div class="gt-modal-header"></div>
+      <div class="gt-modal-body"></div>
+      <div data-modal="hide" class="gt-modal-close">
+        <a href="javascript:void(0);">
+          <img src="http://static.gabia.com/gtris/1.1.0/assets/images/delete.svg" alt="닫기">
+        </a>
     </div>
+  </div>
 </div>
 ```
 
