@@ -24,6 +24,19 @@ Syntax highlighted code block
 **Bold** and _Italic_ and `Code` text
 
 [Link](url) and ![Image](src)
+
+
+<div id="id-modal" class="gt-modal">
+    <div class="gt-modal-content gt-animate-opacity">
+        <div class="gt-modal-header"></div>
+        <div class="gt-modal-body"></div>
+        <div data-modal="hide" class="gt-modal-close">
+            <a href="javascript:void(0);">
+                <img src="http://static.gabia.com/gtris/1.1.0/assets/images/delete.svg" alt="닫기">
+            </a>
+        </div>
+    </div>
+</div>
 ```
 
 For more details see [GitHub Flavored Markdown](https://guides.github.com/features/mastering-markdown/).
