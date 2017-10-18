@@ -25,7 +25,7 @@ Markdown is a lightweight and easy-to-use syntax for styling your writing. It in
 
 ### # 기본 모달 마크업(html)
 
-Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
+아래와 같이 모달 콘텐츠를 작성합니다.
 
 ```markdown
 <div id="id-modal" class="gt-modal">
