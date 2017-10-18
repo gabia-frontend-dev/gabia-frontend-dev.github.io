@@ -1,1 +1,22 @@
-theme: jekyll-theme-cayman
+#theme: jekyll-theme-cayman
+
+# Permalinks
+permalink:      /:year-:month-:day/:title
+
+# Setup
+title:          Tale
+paginate:       5
+baseurl:        "/abia-frontend-dev"
+url:            "https://gabia-frontend-dev.github.io"
+
+# Assets
+sass:
+  sass_dir:     _sass
+  style:        :compressed
+
+# Build settings
+markdown:       kramdown
+
+# Gems
+gems:
+  - jekyll-paginate
