@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>
+
+  Modal &middot; 가비아 프론트엔드 개발팀 블로그
+
+</title>
+<!-- CSS -->
+<link rel="stylesheet" href="/assets/styles.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Libre+Baskerville:400,400i,700">
+<link rel="shortcut icon" type="image/x-icon" href="https://static.gabia.com/www/common/img/favicon.ico">
+<!-- JS -->
+<script type="text/javascript" src="https://static.gabia.com/libs/jquery/1.9.1/jquery.min.js"></script>
+<script type="text/javascript" src="https://static.gabia.com/gtris/1.2.0/js/gtris.min.js"></script>
+</head>
+
+
+  <body>
+    <nav class="nav">
+      <div class="nav-container">
+        <a href="//">
+          <h2 class="nav-title">가비아 프론트엔드 개발팀 블로그</h2>
+        </a>
+        <ul>
+          <li><a href="http://localhost:4000/about">About</a></li>
+          <li><a href="http://localhost:4000/">Posts</a></li>
+        </ul>
+    </div>
+  </nav>
+
+    <main>
+      <div class="post">
+  <div class="post-info">
+    <span>Written by</span>
+    
+        아무개
+    
+
+    
+      <br>
+      <span>on&nbsp;</span><time datetime="2017-10-17 00:00:00 +0900">October 17, 2017</time>
+    
+  </div>
+
+  <h1 class="post-title">Modal</h1>
+  <div class="post-line"></div>
+
+  <h2 id="welcome-to-github-pages">Welcome to GitHub Pages</h2>
+
+<p>You can use the <a href="https://github.com/gabia-frontend-dev/gabia-frontend-dev.github.io/edit/master/README.md">editor on GitHub</a> to maintain and preview the content for your website in Markdown files.</p>
+
+<p>Whenever you commit to this repository, GitHub Pages will run <a href="https://jekyllrb.com/">Jekyll</a> to rebuild the pages in your site, from the content in your Markdown files.</p>
+
+<h3 id="-html-설정하기"># HTML 설정하기</h3>
+
+<p>Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for</p>
+
+<div class="language-markdown highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="cp">&lt;!DOCTYPE html&gt;</span>
+<span class="nt">&lt;html&gt;</span>
+<span class="nt">&lt;head&gt;</span>
+<span class="c">&lt;!--Import gtris.css--&gt;</span>
+<span class="nt">&lt;link</span> <span class="na">type=</span><span class="s">"text/css"</span> <span class="na">rel=</span><span class="s">"stylesheet"</span> <span class="na">href=</span><span class="s">"https://static.gabia.com/gtris/1.2.0/css/gtris.min.css"</span><span class="nt">&gt;</span>
+<span class="nt">&lt;/head&gt;</span>
+<span class="nt">&lt;body&gt;</span>
+<span class="c">&lt;!--Import jQuery before gtris.js--&gt;</span>
+<span class="nt">&lt;script </span><span class="na">type=</span><span class="s">"text/javascript"</span> <span class="na">src=</span><span class="s">"https://static.gabia.com/libs/jquery/1.9.1/jquery.min.js"</span><span class="nt">&gt;&lt;/script&gt;</span>
+<span class="nt">&lt;script </span><span class="na">type=</span><span class="s">"text/javascript"</span> <span class="na">src=</span><span class="s">"https://static.gabia.com/gtris/1.2.0/js/gtris.min.js"</span><span class="nt">&gt;&lt;/script&gt;</span>
+<span class="nt">&lt;/body&gt;</span>
+<span class="nt">&lt;/html&gt;</span>
+</code></pre></div></div>
+
+<h3 id="-기본-모달-마크업html"># 기본 모달 마크업(html)</h3>
+
+<p>아래와 같이 모달 콘텐츠를 작성합니다.</p>
+
+<div class="language-markdown highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;div</span> <span class="na">id=</span><span class="s">"id-modal"</span> <span class="na">class=</span><span class="s">"gt-modal"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"gt-modal-content gt-animate-opacity"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"gt-modal-header"</span><span class="nt">&gt;&lt;/div&gt;</span>
+      <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"gt-modal-body"</span><span class="nt">&gt;&lt;/div&gt;</span>
+      <span class="nt">&lt;div</span> <span class="na">data-modal=</span><span class="s">"hide"</span> <span class="na">class=</span><span class="s">"gt-modal-close"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">"javascript:void(0);"</span><span class="nt">&gt;</span>
+          <span class="nt">&lt;img</span> <span class="na">src=</span><span class="s">"http://static.gabia.com/gtris/1.1.0/assets/images/delete.svg"</span> <span class="na">alt=</span><span class="s">"닫기"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;/a&gt;</span>
+    <span class="nt">&lt;/div&gt;</span>
+  <span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;/div&gt;</span>
+</code></pre></div></div>
+
+<h3 id="-모달-호출하기js"># 모달 호출하기(js)</h3>
+
+<p>모달 마크업을 작성한 후 자바스크립트를 통해 해당 모달을 호출합니다.</p>
+
+<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nx">$</span><span class="p">(</span><span class="s1">'button'</span><span class="p">).</span><span class="nx">click</span><span class="p">(</span><span class="kd">function</span><span class="p">(</span><span class="nx">event</span><span class="p">)</span> <span class="p">{</span>
+  <span class="nx">gtris</span><span class="p">.</span><span class="nx">ui</span><span class="p">.</span><span class="nx">modal</span><span class="p">.</span><span class="nx">open</span><span class="p">({</span>
+    <span class="na">target</span><span class="p">:</span> <span class="s1">'Set the URL, ID or Class.'</span>
+  <span class="p">})</span>
+<span class="p">});</span>
+</code></pre></div></div>
+
+<h3 id="-이벤트-리턴js"># 이벤트 리턴(js)</h3>
+
+<p>모달이 나타난 후, 닫힌 후 콜백 이벤트를 리턴 받을 수 있습니다.</p>
+
+<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nx">$</span><span class="p">(</span><span class="s1">'button'</span><span class="p">).</span><span class="nx">click</span><span class="p">(</span><span class="kd">function</span><span class="p">(</span><span class="nx">event</span><span class="p">)</span> <span class="p">{</span>
+  <span class="nx">gtris</span><span class="p">.</span><span class="nx">ui</span><span class="p">.</span><span class="nx">modal</span><span class="p">.</span><span class="nx">open</span><span class="p">({</span>
+    <span class="na">target</span><span class="p">:</span> <span class="s1">'Set the URL, ID or Class.'</span>
+    <span class="na">completed</span><span class="p">:</span> <span class="kd">function</span><span class="p">(</span><span class="nx">$modal</span><span class="p">)</span> <span class="p">{</span>
+      <span class="nx">alert</span><span class="p">(</span><span class="s1">'completed'</span><span class="p">);</span>
+    <span class="p">},</span>
+    <span class="na">closed</span><span class="p">:</span> <span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
+      <span class="nx">alert</span><span class="p">(</span><span class="s1">'closed'</span><span class="p">);</span>
+    <span class="p">}</span>
+  <span class="p">})</span>
+<span class="p">});</span>
+</code></pre></div></div>
+
+<h3 id="-오버레이-컬러-변경js"># 오버레이 컬러 변경(js)</h3>
+
+<p>모달 콘텐츠 뒤 배경 색을 변경할 수 있습니다. 설정하지 않으면 #333이 기본색입니다.</p>
+
+<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nx">$</span><span class="p">(</span><span class="s1">'button'</span><span class="p">).</span><span class="nx">click</span><span class="p">(</span><span class="kd">function</span><span class="p">(</span><span class="nx">event</span><span class="p">)</span> <span class="p">{</span>
+  <span class="nx">gtris</span><span class="p">.</span><span class="nx">ui</span><span class="p">.</span><span class="nx">modal</span><span class="p">.</span><span class="nx">open</span><span class="p">({</span>
+    <span class="na">target</span><span class="p">:</span> <span class="s1">'Set the URL, ID or Class.'</span><span class="p">,</span>
+    <span class="na">overlayColor</span><span class="p">:</span> <span class="s1">'red'</span>
+  <span class="p">})</span>
+<span class="p">});</span>
+</code></pre></div></div>
+
+<h3 id="-오버레이-불투명도-변경js"># 오버레이 불투명도 변경(js)</h3>
+
+<p>모달 콘텐츠 뒤 불투명도를 변경할 수 있습니다. 설정하지 않으면 기본 불투명도는 0.35입니다.</p>
+
+<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nx">$</span><span class="p">(</span><span class="s1">'button'</span><span class="p">).</span><span class="nx">click</span><span class="p">(</span><span class="kd">function</span><span class="p">(</span><span class="nx">event</span><span class="p">)</span> <span class="p">{</span>
+  <span class="nx">gtris</span><span class="p">.</span><span class="nx">ui</span><span class="p">.</span><span class="nx">modal</span><span class="p">.</span><span class="nx">open</span><span class="p">({</span>
+    <span class="na">target</span><span class="p">:</span> <span class="s1">'Set the URL, ID or Class.'</span><span class="p">,</span>
+    <span class="na">overlayOpacity</span><span class="p">:</span> <span class="mi">1</span>
+  <span class="p">})</span>
+<span class="p">});</span>
+</code></pre></div></div>
+
+<h3 id="-다중-모달js"># 다중 모달(js)</h3>
+
+<p>모달 콘텐츠가 활성화 된 상태에서 다시 모달을 호출할 수 있습니다.<br />
+completed 이벤트를 리턴 받은 후 사용해주세요!</p>
+
+<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nx">$</span><span class="p">(</span><span class="s1">'button-1'</span><span class="p">).</span><span class="nx">click</span><span class="p">(</span><span class="kd">function</span><span class="p">(</span><span class="nx">event</span><span class="p">)</span> <span class="p">{</span>
+  <span class="nx">gtris</span><span class="p">.</span><span class="nx">ui</span><span class="p">.</span><span class="nx">modal</span><span class="p">.</span><span class="nx">open</span><span class="p">({</span>
+    <span class="na">target</span><span class="p">:</span> <span class="s1">'Set the URL, ID or Class.'</span><span class="p">,</span>
+    <span class="na">completed</span><span class="p">:</span> <span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
+        <span class="nx">$</span><span class="p">(</span><span class="s1">'button-2'</span><span class="p">).</span><span class="nx">click</span><span class="p">(</span><span class="kd">function</span><span class="p">(</span><span class="nx">event</span><span class="p">)</span> <span class="p">{</span>
+          <span class="nx">gtris</span><span class="p">.</span><span class="nx">ui</span><span class="p">.</span><span class="nx">modal</span><span class="p">.</span><span class="nx">open</span><span class="p">({</span>
+          <span class="na">target</span><span class="p">:</span> <span class="s1">'Set the URL, ID or Class.'</span>
+        <span class="p">})</span>
+      <span class="p">});</span>
+    <span class="p">}</span>
+  <span class="p">})</span>
+<span class="p">});</span>
+</code></pre></div></div>
+
+<h3 id="-모달-애니메이션-효과html"># 모달 애니메이션 효과(html)</h3>
+
+<p>모달이 나타나는 동작을 다르게 할 수 있습니다.<br />
+총 5가지 animate 클래스로 모달이 나타나는 방법을 다르게 구현해보세요!</p>
+
+<div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c">&lt;!-- gt-animate-top --&gt;</span>
+<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"gt-modal"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"gt-modal-content gt-animate-top"</span><span class="nt">&gt;&lt;/div&gt;</span>
+<span class="nt">&lt;/div&gt;</span>
+
+<span class="c">&lt;!-- gt-animate-bottom --&gt;</span>
+<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"gt-modal"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"gt-modal-content gt-animate-bottom"</span><span class="nt">&gt;&lt;/div&gt;</span>
+<span class="nt">&lt;/div&gt;</span>
+
+<span class="c">&lt;!-- gt-animate-left --&gt;</span>
+<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"gt-modal"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"gt-modal-content gt-animate-left"</span><span class="nt">&gt;&lt;/div&gt;</span>
+<span class="nt">&lt;/div&gt;</span>
+
+<span class="c">&lt;!-- gt-animate-right --&gt;</span>
+<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"gt-modal"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"gt-modal-content gt-animate-right"</span><span class="nt">&gt;&lt;/div&gt;</span>
+<span class="nt">&lt;/div&gt;</span>
+
+<span class="c">&lt;!-- gt-animate-zoom --&gt;</span>
+<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"gt-modal"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"gt-modal-content gt-animate-zoom"</span><span class="nt">&gt;&lt;/div&gt;</span>
+<span class="nt">&lt;/div&gt;</span>
+</code></pre></div></div>
+
+<p>For more details see <a href="https://guides.github.com/features/mastering-markdown/">GitHub Flavored Markdown</a>.</p>
+
+<h3 id="jekyll-themes">Jekyll Themes</h3>
+
+<p>Your Pages site will use the layout and styles from the Jekyll theme you have selected in your <a href="https://github.com/gabia-frontend-dev/gabia-frontend-dev.github.io/settings">repository settings</a>. The name of this theme is saved in the Jekyll <code class="highlighter-rouge">_config.yml</code> configuration file.</p>
+
+<h3 id="support-or-contact">Support or Contact</h3>
+
+<p>Having trouble with Pages? Check out our <a href="https://help.github.com/categories/github-pages-basics/">documentation</a> or <a href="https://github.com/contact">contact support</a> and we’ll help you sort it out.</p>
+
+<!--  
+<button id="id-modal-btn" class="gt-button gt-button-success">Set the Target(ID)</button>
+<div id="id-modal" class="gt-modal">
+  <div class="gt-modal-content gt-animate-opacity">
+    <div class="gt-modal-header">Id Modal</div>
+    <div class="gt-modal-body">
+      <p class="gt-xxlarge gt-text-blue gt-center">도메인에 대한 다섯 가지 오해</p>
+      <p class="gt-center gt-padding-large">도메인을 고르는 건 어려운 일이다. 특히 회사의 이름을 정하는 일과 관계되어 있을 때면 도메인을 고르는 건 더욱 어려워진다. 도메인 선택의 주요한 고민 가운데 하나는 ‘어떤 gTLD를 사용할 것인가’이다. TLD란 사이트 뒤에 붙는 접미사 같은 것으로, 우리에게 익숙한 .com, .net. .kr뿐만 아니라 .cafe, .sports는 물론 심지어 .sexy 같은 것들도 모두 TLD에 속한다. TLD는 전보다 훨씬 다양해졌고 지금도 계속....</p>
+    </div>
+    <div data-modal="hide" class="gt-modal-close">
+      <a href="javascript:void(0);">
+        <img src="http://static.gabia.com/gtris/1.1.0/assets/images/delete.svg" alt="닫기">
+      </a>
+    </div>
+  </div>
+</div>
+
+<script>
+$('#id-modal-btn').click(function(event) {
+gtris.ui.modal.open({
+    target: '#id-modal'
+  })
+});
+</script>
+-->
+
+
+</div>
+
+<div class="pagination">
+  
+    <a href="//2017-10-17/nabia" class="left arrow">&#8592;</a>
+  
+  
+    <a href="//2017-10-17/gabia" class="right arrow">&#8594;</a>
+  
+
+  <a href="#" class="top">Top</a>
+</div>
+
+    </main>
+
+    <footer>
+      <span>
+        &copy; <time datetime="2017-10-18 15:49:01 +0900">2017</time> . Made with Jekyll using the <a href="https://github.com/chesterhow/tale/">Tale</a> theme.
+      </span>
+    </footer>
+  </body>
+</html>
