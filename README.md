@@ -23,7 +23,7 @@ Markdown is a lightweight and easy-to-use syntax for styling your writing. It in
 </html>
 ```
 
-### # 기본 모달 마크업
+### # 기본 모달 마크업(html)
 
 Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
 
@@ -41,7 +41,7 @@ Markdown is a lightweight and easy-to-use syntax for styling your writing. It in
 </div>
 ```
 
-### # 기본 모달 마크업
+### # 모달 호출하기(js)
 
 모달 마크업을 작성한 후 자바스크립트를 통해 해당 모달을 호출합니다.
 
