@@ -43,6 +43,8 @@ Markdown is a lightweight and easy-to-use syntax for styling your writing. It in
 
 ### # 기본 모달 마크업
 
+모달 마크업을 작성한 후 자바스크립트를 통해 해당 모달을 호출합니다.
+
 ```javascript
 $('button').click(function(event) {
   gtris.ui.modal.open({
