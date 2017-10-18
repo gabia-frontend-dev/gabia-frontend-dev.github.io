@@ -6,7 +6,7 @@ permalink:      /:year-:month-:day/:title
 # Setup
 title:          Tale
 paginate:       5
-baseurl:        "/abia-frontend-dev"
+baseurl:        "/"
 url:            "https://gabia-frontend-dev.github.io"
 
 # Assets
