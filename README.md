@@ -18,7 +18,7 @@ Markdown is a lightweight and easy-to-use syntax for styling your writing. It in
 <body>
 <!--Import jQuery before gtris.js-->
 <script type="text/javascript" src="https://static.gabia.com/libs/jquery/1.9.1/jquery.min.js"></script>
-<script type="text/javascript" src="https://static.gabia.com/gtris/1.2.0/js/gtris.js"></script>
+<script type="text/javascript" src="https://static.gabia.com/gtris/1.2.0/js/gtris.min.js"></script>
 </body>
 </html>
 ```
