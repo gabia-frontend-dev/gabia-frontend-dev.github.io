@@ -6,7 +6,7 @@ permalink:      /:year-:month-:day/:title
 # Setup
 title:          가비아 프론트엔드 개발팀 블로그
 paginate:       5
-baseurl:        "/gabia-frontend-dev"
+baseurl:        "/"
 url:            "https://gabia-frontend-dev.github.io"
 
 # Assets
