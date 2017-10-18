@@ -4,6 +4,25 @@ You can use the [editor on GitHub](https://github.com/gabia-frontend-dev/gabia-f
 
 Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
 
+### # HTML 설정하기
+
+Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
+
+```markdown
+<!DOCTYPE html>
+<html>
+<head>
+<!--Import gtris.css-->
+<link type="text/css" rel="stylesheet" href="https://static.gabia.com/gtris/1.2.0/css/gtris.min.css">
+</head>
+<body>
+<!--Import jQuery before gtris.js-->
+<script type="text/javascript" src="https://static.gabia.com/libs/jquery/1.9.1/jquery.min.js"></script>
+<script type="text/javascript" src="https://static.gabia.com/gtris/1.2.0/js/gtris.js"></script>
+</body>
+</html>
+```
+
 ### # 기본 모달 마크업
 
 Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
