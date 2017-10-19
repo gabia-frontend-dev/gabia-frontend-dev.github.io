@@ -9,6 +9,9 @@ paginate:       5
 baseurl:        "/"
 url:            "https://gabia-frontend-dev.github.io"
 
+# Category
+category_page: '/categories/'
+
 # Assets
 sass:
   sass_dir:     _sass
