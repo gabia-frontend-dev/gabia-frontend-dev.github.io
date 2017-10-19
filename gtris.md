@@ -5,7 +5,7 @@ author: "Gabia frontend dev"
 permalink: /gtris/
 ---
 
-## table
+## ??????table
 
 ## modal
 
