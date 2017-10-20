@@ -16,7 +16,7 @@ tags: "gtris, framework"
 
 ### # 가운데 정렬 된 Pagination(html)
 
-보통 pagination은 가운데 정렬된 형태로 많이 사용합니다.  
+pagination은 가운데 정렬된 형태로 많이 사용합니다.  
 pagination을 감싸는 div를 만들고 gt-center 클래스를 추가해주세요!
 
 <script src="https://gist.github.com/gabia-frontend-dev/9f721da7a95b4e1a7b439136ae53ad2e.js"></script>
