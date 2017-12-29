@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Pagination"
-author: "개미"
+author: "kimdy"
 categories: "gtris"
 tags: "gtris, framework"
 ---
